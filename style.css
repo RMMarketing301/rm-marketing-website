@@ -30,7 +30,7 @@ nav {
   top: 0;
   width: 100%;
   z-index: 100;
-  background: rgba(0, 0, 0, 0.96);
+  background: rgba(0, 0, 0, 0.55);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(53,51,205,0.3);
 }
@@ -87,9 +87,10 @@ nav {
   min-height: 100vh;
   background: linear-gradient(135deg, #07071a 0%, #12103a 50%, #0a0a20 100%);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 8rem 6rem 5rem;
+  padding: 0;
   position: relative;
   overflow: hidden;
 }
@@ -111,6 +112,7 @@ nav {
   position: relative;
   z-index: 1;
   text-align: center;
+  padding: 2rem 2rem 5rem;
 }
 
 .hero-img-wrap {
@@ -308,10 +310,14 @@ h2 {
 }
 
 .card-icon {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
+  line-height: 1;
   color: var(--accent);
   margin-bottom: 1rem;
   display: inline-block;
+  width: 1.4rem;
+  height: 1.4rem;
+  text-align: center;
 }
 
 .card h3 {
@@ -521,16 +527,55 @@ blockquote {
 /* ── CITY BANNER ── */
 .city-banner {
   width: 100%;
-  height: 320px;
+  height: 65vh;
   overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.city-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(7,7,26,0.35) 0%, rgba(7,7,26,0.15) 50%, rgba(7,7,26,0.5) 100%);
+  z-index: 1;
+  pointer-events: none;
 }
 
 .city-banner-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 50%;
+  object-position: center 45%;
   display: block;
+}
+
+.city-banner-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 2;
+  padding: 8rem 2rem 4rem;
+  text-align: center;
+}
+
+.city-banner-text h1 {
+  font-size: clamp(2.4rem, 5.5vw, 4.5rem);
+  text-shadow: none;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 16px;
+  padding: 1.2rem 2.5rem;
+  color: white;
+}
+
+.city-banner-text .eyebrow {
+  text-shadow: 0 1px 10px rgba(0,0,0,0.9);
 }
 
 /* ── VISIBILIDAD ── */
@@ -643,7 +688,16 @@ blockquote {
 }
 
 /* ── CONTACTO ── */
-.contacto { background: var(--dark2); }
+.contacto {
+  background-color: var(--dark2);
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 28px,
+    rgba(53,51,205,0.12) 28px,
+    rgba(53,51,205,0.12) 30px
+  );
+}
 .contacto h2 { color: white; }
 
 .contacto-inner {
@@ -681,7 +735,7 @@ label {
 input, textarea {
   width: 100%;
   padding: 0.85rem 1rem;
-  background: rgba(255,255,255,0.04);
+  background: rgba(10,10,20,0.85);
   border: 1.5px solid rgba(53,51,205,0.3);
   border-radius: 10px;
   font-size: 0.92rem;
@@ -765,7 +819,7 @@ footer {
 
 /* Nav scroll effect */
 nav.scrolled {
-  background: rgba(0, 0, 0, 1);
+  background: rgba(0, 0, 0, 0.55);
   box-shadow: 0 2px 30px rgba(53,51,205,0.2);
 }
 
