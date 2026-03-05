@@ -518,6 +518,21 @@ blockquote {
   letter-spacing: 0.1em;
 }
 
+/* ── CITY BANNER ── */
+.city-banner {
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+}
+
+.city-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 50%;
+  display: block;
+}
+
 /* ── VISIBILIDAD ── */
 .visibilidad {
   background: var(--light-bg);
