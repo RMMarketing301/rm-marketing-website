@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lupe — Contacto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <span class="logo">Lupe</span>
+      <a href="#contacto" class="nav-cta">Escribeme</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">Bienvenido</p>
+      <h1>Hola, soy Lupe</h1>
+      <p class="hero-sub">Aqui para ayudarte con lo que necesites. Con dedicacion, profesionalismo y mucho cuidado en cada detalle.</p>
+      <a href="#contacto" class="btn-primary">Hablemos</a>
+    </div>
+    <div class="hero-shape"></div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section class="servicios">
+    <div class="section-inner">
+      <p class="section-label">Lo que hago</p>
+      <h2>Como puedo ayudarte</h2>
+      <div class="cards">
+        <div class="card">
+          <div class="card-icon">&#10022;</div>
+          <h3>Servicio 1</h3>
+          <p>Describe aqui el primer servicio que ofreces a tus clientes de forma breve y clara.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">&#9671;</div>
+          <h3>Servicio 2</h3>
+          <p>Describe aqui el segundo servicio que ofreces a tus clientes de forma breve y clara.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">&#9675;</div>
+          <h3>Servicio 3</h3>
+          <p>Describe aqui el tercer servicio que ofreces a tus clientes de forma breve y clara.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE MI -->
+  <section class="sobre-mi">
+    <div class="section-inner sobre-grid">
+      <div class="sobre-texto">
+        <p class="section-label">Sobre mi</p>
+        <h2>Un poco sobre quien soy</h2>
+        <p>Cuéntale a tus clientes quién eres, tu experiencia, tus valores y lo que te hace diferente. Esta sección genera confianza y hace que la gente quiera trabajar contigo.</p>
+        <p>Puedes hablar de tus años de experiencia, tus estudios, tu historia personal o simplemente por que amas lo que haces.</p>
+      </div>
+      <div class="sobre-foto">
+        <div class="foto-placeholder">
+          <span>Tu foto aqui</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="contacto" id="contacto">
+    <div class="section-inner contacto-inner">
+      <div class="contacto-texto">
+        <p class="section-label light">Contacto</p>
+        <h2>Mandame un mensaje</h2>
+        <p>Tengo alguna pregunta o quieres que trabajemos juntos? Escribe aqui y te respondo lo mas pronto posible.</p>
+      </div>
+      <form class="contacto-form" action="https://formspree.io/f/TU_ID_AQUI" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" placeholder="Tu nombre" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Correo electronico</label>
+            <input type="email" id="email" name="email" placeholder="tu@correo.com" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" rows="5" placeholder="En que te puedo ayudar?" required></textarea>
+        </div>
+        <button type="submit">Enviar mensaje &rarr;</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 Lupe. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
