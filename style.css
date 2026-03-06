@@ -943,3 +943,25 @@ nav.scrolled {
   .form-row { grid-template-columns: 1fr; }
   .paquetes-grid { grid-template-columns: 1fr; }
 }
+
+@media (max-width: 600px) {
+  /* Nav */
+  .nav-links { gap: 1rem; }
+  .nav-links a { font-size: 0.75rem; }
+  .nav-cta { font-size: 0.75rem; padding: 0.4rem 0.9rem; }
+  .logo-img { height: 38px; }
+
+  /* Hero city banner */
+  .city-banner { height: 55vh; }
+  .city-banner-text h1 { font-size: clamp(1.6rem, 7vw, 2.8rem); padding: 0.8rem 1.2rem; }
+  .city-banner-text .eyebrow { font-size: 0.7rem; letter-spacing: 0.12em; }
+
+  /* Stats */
+  .hero-stats { flex-direction: column; gap: 1.5rem; align-items: center; }
+  .stat-divider { width: 60px; height: 1px; }
+  .stat { align-items: center; text-align: center; }
+
+  /* Service cards — 1 columna */
+  .cards { grid-template-columns: 1fr; }
+  .card { grid-column: span 1 !important; }
+}
