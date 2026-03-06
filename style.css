@@ -976,6 +976,7 @@ nav.scrolled {
   .visibilidad-img { max-height: 220px; object-fit: cover; }
 
   /* Ocultar orbes animados */
-  .hero::after { display: none; }
-  .hero-stats::before { display: none; }
+  .hero::after { content: none; }
+  .hero-stats::before { content: none; }
+  .hero { overflow: hidden; }
 }
