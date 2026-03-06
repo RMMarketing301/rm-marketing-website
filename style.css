@@ -948,7 +948,7 @@ nav.scrolled {
   /* Nav */
   .nav-links { gap: 1rem; }
   .nav-links a { font-size: 0.75rem; }
-  .nav-cta { font-size: 0.75rem; padding: 0.4rem 0.9rem; }
+  .nav-cta { display: none; }
   .logo-img { height: 38px; }
 
   /* Hero city banner */
