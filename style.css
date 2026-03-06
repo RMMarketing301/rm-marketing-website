@@ -737,7 +737,7 @@ input, textarea {
   width: 100%;
   padding: 0.85rem 1rem;
   background: rgba(10,10,20,0.85);
-  border: 1.5px solid rgba(53,51,205,0.3);
+  border: 1.5px solid rgba(53,51,205,0.7);
   border-radius: 10px;
   font-size: 0.92rem;
   font-family: inherit;
@@ -952,8 +952,15 @@ nav.scrolled {
   .logo-img { height: 38px; }
 
   /* Hero city banner */
-  .city-banner { height: 55vh; }
-  .city-banner-text h1 { font-size: clamp(1.6rem, 7vw, 2.8rem); padding: 0.8rem 1.2rem; }
+  .city-banner { height: 55vh; width: 100vw; margin-left: 0; }
+  .city-banner-img { width: 100%; object-fit: cover; }
+  .city-banner-text h1 {
+    font-size: clamp(1.3rem, 6vw, 2rem);
+    padding: 0.6rem 1rem;
+    background: rgba(255,255,255,0.04);
+    border-color: rgba(255,255,255,0.08);
+    width: 90%;
+  }
   .city-banner-text .eyebrow { font-size: 0.7rem; letter-spacing: 0.12em; }
 
   /* Stats */
