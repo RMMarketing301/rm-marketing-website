@@ -576,6 +576,7 @@ blockquote {
 
 .city-banner-text .eyebrow {
   text-shadow: 0 1px 10px rgba(0,0,0,0.9);
+  font-size: 1rem;
 }
 
 /* ── VISIBILIDAD ── */
