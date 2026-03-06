@@ -971,4 +971,7 @@ nav.scrolled {
   /* Service cards — 1 columna */
   .cards { grid-template-columns: 1fr; }
   .card { grid-column: span 1 !important; }
+
+  /* Visibilidad imagen */
+  .visibilidad-img { max-height: 220px; object-fit: cover; }
 }
