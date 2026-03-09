@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pago Exitoso — RM Marketing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Belleza&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="favicon.png" sizes="512x512" />
+  <style>
+    .gracias-wrap {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 8rem 2rem 5rem;
+      text-align: center;
+    }
+
+    .check-circle {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #3533cd, #5553e0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 2rem;
+      box-shadow: 0 0 40px rgba(53,51,205,0.35);
+    }
+
+    .check-circle svg {
+      width: 40px;
+      height: 40px;
+      stroke: #fff;
+      stroke-width: 2.5;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .gracias-wrap h1 {
+      font-family: "Belleza", sans-serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      color: var(--text);
+      margin-bottom: 1rem;
+    }
+
+    .gracias-wrap h1 span {
+      background: var(--grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .gracias-sub {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 520px;
+      line-height: 1.75;
+      margin-bottom: 2.5rem;
+    }
+
+    .gracias-card {
+      background: var(--light-bg);
+      border: 1px solid rgba(53,51,205,0.12);
+      border-radius: 14px;
+      padding: 2rem 2.5rem;
+      max-width: 480px;
+      width: 100%;
+      margin-bottom: 2rem;
+      text-align: left;
+    }
+
+    .gracias-card p {
+      font-size: 0.93rem;
+      color: #555;
+      line-height: 1.8;
+      margin-bottom: 0.5rem;
+    }
+
+    .gracias-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .gracias-card strong {
+      color: var(--text);
+    }
+
+    .nota-cliente {
+      max-width: 480px;
+      width: 100%;
+      background: #fff8e7;
+      border: 1px solid rgba(200,160,0,0.2);
+      border-left: 3px solid #c8a000;
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      margin-bottom: 2.5rem;
+      text-align: left;
+      font-size: 0.88rem;
+      color: #6b5a00;
+      line-height: 1.7;
+    }
+
+    .nota-cliente strong {
+      color: #4a3f00;
+    }
+
+    .gracias-btns {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-links">
+        <a href="index.html#servicios">Servicios</a>
+        <a href="index.html#paquetes">Paquetes</a>
+        <a href="index.html#sobre">Nosotros</a>
+      </div>
+      <img src="LOGO.png" alt="RM Marketing" class="logo-img" />
+      <a href="index.html#contacto" class="nav-cta">Hablemos</a>
+    </div>
+  </nav>
+
+  <div class="gracias-wrap">
+
+    <div class="check-circle">
+      <svg viewBox="0 0 24 24">
+        <polyline points="20 6 9 17 4 12"></polyline>
+      </svg>
+    </div>
+
+    <h1>Gracias por su <span>pago</span></h1>
+    <p class="gracias-sub">
+      Su pago fue procesado exitosamente. En breve un miembro de nuestro equipo se pondra en contacto con usted para dar inicio a su servicio.
+    </p>
+
+    <div class="gracias-card">
+      <p><strong>Que sigue?</strong></p>
+      <p>Revisaremos su pago y nos comunicaremos con usted en un plazo de <strong>24 horas habiles</strong> para coordinar los proximos pasos.</p>
+      <p>Si tiene alguna pregunta, escribanos a <strong><a href="mailto:contact@agenciamarketingrm.com" style="color:var(--accent);text-decoration:none;">contact@agenciamarketingrm.com</a></strong> o por WhatsApp al <strong><a href="https://wa.me/573014089120" style="color:var(--accent);text-decoration:none;">+57 301 408 91 20</a></strong>.</p>
+    </div>
+
+    <div class="nota-cliente">
+      <strong>Si ya eres cliente mensual o miembro activo,</strong> puedes omitir este mensaje. Para cualquier duda o seguimiento, contacta directamente a tu punto de contacto: <strong>Daniel Palacio</strong>.
+    </div>
+
+    <div class="gracias-btns">
+      <a href="index.html" class="btn-primary">Volver al inicio</a>
+      <a href="https://wa.me/573014089120" class="btn-secondary" target="_blank" rel="noopener">Escribirnos por WhatsApp</a>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2026 RM Marketing. Agencia de Marketing &amp; Comunicacion Digital.</p>
+    <p class="footer-loc">Medellin &bull; Envigado &bull; Sabaneta</p>
+  </footer>
+
+</body>
+</html>
