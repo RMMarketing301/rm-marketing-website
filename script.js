@@ -1,5 +1,8 @@
 // ── NAV SCROLL ──
 const nav = document.querySelector('nav');
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
+
 window.addEventListener('scroll', () => {
   if (window.scrollY > 50) {
     nav.classList.add('scrolled');
@@ -7,6 +10,20 @@ window.addEventListener('scroll', () => {
     nav.classList.remove('scrolled');
   }
 });
+
+if (navToggle && navLinks) {
+  navToggle.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('nav-open');
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  navLinks.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('nav-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+}
 
 // ── SCROLL REVEAL ──
 const revealEls = document.querySelectorAll(

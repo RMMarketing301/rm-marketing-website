@@ -45,10 +45,17 @@ nav {
   gap: 2rem;
 }
 
+.nav-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
 .nav-links {
   display: flex;
   gap: 2rem;
-  flex: 1;
+  align-items: center;
+  margin-left: auto;
 }
 
 .nav-links a {
@@ -62,11 +69,43 @@ nav {
 
 .nav-links a:hover { color: white; }
 
+.nav-mobile-cta { display: none; }
+
 .logo-img {
   height: 54px;
   width: auto;
   display: block;
   border-radius: 12px;
+}
+
+.nav-toggle {
+  display: none;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.04);
+  border-radius: 14px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.35rem;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  width: 18px;
+  height: 2px;
+  background: white;
+  display: block;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-open .nav-toggle span:first-child {
+  transform: translateY(4px) rotate(45deg);
+}
+
+.nav-open .nav-toggle span:last-child {
+  transform: translateY(-4px) rotate(-45deg);
 }
 
 .nav-cta {
@@ -170,6 +209,7 @@ nav {
   padding-top: 2.5rem;
   border-top: 1px solid rgba(255,255,255,0.35);
   justify-content: center;
+  position: relative;
 }
 
 .stat { display: flex; flex-direction: column; gap: 0.25rem; }
@@ -280,6 +320,10 @@ h2 {
 .nichos span:hover {
   border-color: var(--accent);
   color: var(--accent);
+}
+
+.nicho-chip {
+  box-shadow: 0 10px 24px rgba(17,17,17,0.04);
 }
 
 /* ── DIFERENCIA ── */
@@ -468,6 +512,7 @@ h2 {
 
 .paquete.featured .btn-paquete:hover { background: var(--accent2); }
 
+/* ── RESULTADOS ── */
 /* ── ADDON BOX ── */
 .addon-box {
   margin-top: 2.5rem;
@@ -925,11 +970,8 @@ nav.scrolled {
 
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
-  .hero {
-    grid-template-columns: 1fr;
-    padding: 8rem 2rem 4rem;
-    text-align: center;
-  }
+  .nav-inner { gap: 1rem; }
+  .nav-links { gap: 1.1rem; }
   .hero-content { text-align: center; }
   .hero-btns { justify-content: center; }
   .hero-stats { justify-content: center; }
@@ -939,6 +981,45 @@ nav.scrolled {
 }
 
 @media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+    margin-left: auto;
+  }
+  .nav-cta { display: none; }
+  .nav-links {
+    position: absolute;
+    top: calc(100% + 0.8rem);
+    left: 1rem;
+    right: 1rem;
+    margin-left: 0;
+    padding: 1rem;
+    border-radius: 18px;
+    background: rgba(7,7,26,0.96);
+    border: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(14px);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.9rem;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+  .nav-open .nav-links {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+  .nav-mobile-cta {
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 0.35rem;
+    padding: 0.85rem 1rem;
+    background: var(--accent);
+    color: white;
+    border-radius: 999px;
+  }
   .contacto-inner { grid-template-columns: 1fr; gap: 2.5rem; }
   .form-row { grid-template-columns: 1fr; }
   .paquetes-grid { grid-template-columns: 1fr; }
@@ -946,10 +1027,9 @@ nav.scrolled {
 
 @media (max-width: 600px) {
   /* Nav */
-  .nav-links { gap: 1rem; }
-  .nav-links a { font-size: 0.75rem; }
-  .nav-cta { display: none; }
   .logo-img { height: 38px; }
+  .nav-inner { padding: 0.9rem 1rem; }
+  .nav-links a { font-size: 0.88rem; }
 
   /* Hero city banner */
   .city-banner { height: 55vh; width: 100vw; margin-left: 0; }
@@ -979,4 +1059,8 @@ nav.scrolled {
   .hero::after { content: none; }
   .hero-stats::before { content: none; }
   .hero { overflow: hidden; }
+
+  .addon-box,
+  .paquete,
+  .card { padding: 1.4rem; }
 }
