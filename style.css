@@ -550,6 +550,12 @@ h2 {
   line-height: 1.7;
 }
 
+/* ── ADDON WEBSITE ── */
+.addon-box.addon-website {
+  background: var(--grad);
+  border: none;
+}
+
 /* ── MISION ── */
 .mision { background: white; text-align: center; border-top: 1px solid rgba(53,51,205,0.07); }
 
@@ -1101,6 +1107,9 @@ nav.scrolled {
 
   /* Visibilidad imagen */
   .visibilidad-img { max-height: 220px; object-fit: cover; }
+
+  /* Foto Lupe — recortar parte inferior en móvil */
+  .sobre-foto-main { height: 220px; }
 
   /* Ocultar orbes animados */
   .hero::after { content: none; }
