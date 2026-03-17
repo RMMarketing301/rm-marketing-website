@@ -45,6 +45,20 @@ revealEls.forEach((el, i) => {
   observer.observe(el);
 });
 
+// ── GA4 CONVERSION EVENTS ──
+document.querySelectorAll('a[href*="wa.me"]').forEach(el => {
+  el.addEventListener('click', () => {
+    gtag('event', 'whatsapp_click', { event_category: 'conversions' });
+  });
+});
+
+const contactForm = document.querySelector('.contacto-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', () => {
+    gtag('event', 'form_submit', { event_category: 'conversions' });
+  });
+}
+
 // ── SECTION TITLES REVEAL ──
 const titleEls = document.querySelectorAll('h2, .section-label, .eyebrow');
 const titleObserver = new IntersectionObserver((entries) => {
