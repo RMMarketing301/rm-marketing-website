@@ -779,6 +779,11 @@ blockquote {
 
 .info-item:hover { color: var(--accent2); }
 
+.info-item-secondary {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.4);
+}
+
 .info-icon {
   font-size: 1rem;
   color: var(--accent);
@@ -915,6 +920,7 @@ footer {
 }
 
 .wa-float-backup {
+  display: block;
   position: fixed;
   bottom: 6.2rem;
   left: 2rem;
@@ -922,18 +928,18 @@ footer {
   background: rgba(0,0,0,0.75);
   color: #fff;
   font-size: 0.7rem;
-  line-height: 1.2;
+  line-height: 1.3;
   padding: 0.4rem 0.6rem;
   border-radius: 8px;
   text-decoration: none;
-  max-width: 160px;
-  white-space: nowrap;
+  width: 150px;
+  white-space: normal;
+  overflow: visible;
 }
 
 @media (max-width: 480px) {
   .wa-float-backup {
-    max-width: 140px;
-    white-space: normal;
+    width: 130px;
     font-size: 0.65rem;
   }
 }
