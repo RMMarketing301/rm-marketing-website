@@ -914,6 +914,30 @@ footer {
   box-shadow: 0 6px 28px rgba(37,211,102,0.55);
 }
 
+.wa-float-backup {
+  position: fixed;
+  bottom: 6.2rem;
+  left: 2rem;
+  z-index: 999;
+  background: rgba(0,0,0,0.75);
+  color: #fff;
+  font-size: 0.7rem;
+  line-height: 1.2;
+  padding: 0.4rem 0.6rem;
+  border-radius: 8px;
+  text-decoration: none;
+  max-width: 160px;
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .wa-float-backup {
+    max-width: 140px;
+    white-space: normal;
+    font-size: 0.65rem;
+  }
+}
+
 /* ── ANIMACIONES ── */
 
 /* Nav scroll effect */
